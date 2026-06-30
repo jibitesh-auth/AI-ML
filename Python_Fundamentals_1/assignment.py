@@ -65,8 +65,8 @@
 #Q10
 a = float(input("enter the decimal no: "))
 b = int(a)
-c = a -b
-print(int(a))
+c = a - b
+print(b)
 print(c)
 
 
