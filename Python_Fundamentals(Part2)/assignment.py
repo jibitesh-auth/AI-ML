@@ -20,3 +20,14 @@
 # even_num(a,b)
 
 #3
+# def right_print(n):
+#     a = ''
+#     while n>0:
+#         last_digit = n % 10
+#         a+=str(last_digit)
+#         n//=10
+#     for i in range(len(a)-1, -1, -1):
+#         print(a[i])
+    
+
+# right_print(312)
