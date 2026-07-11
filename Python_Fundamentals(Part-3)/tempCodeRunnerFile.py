@@ -1,1 +1,1 @@
-" " + word2)
+print(marks[9])

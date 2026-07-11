@@ -45,8 +45,24 @@
 
 #Formatting
 
+# a = 5
+# b = 10
+# sum = a+b
+# print("language is {}".format("python"))
+# print("sum is {}".format(sum))
+# print("sum of {} & {} is {}".format(a,b,sum))
+
+# #index based formatting
+# print("Sum of {1} & {0} is {2}".format(a,b,sum))
+
+#value based formatting
+# print("{a} values of vars {a} & {b}".format(a=5, b=10))
+
+
+#----------------x----------------------
+#F-strings
+
 a = 5
 b = 10
-sum = a+b
-print("language is {}".format("python"))
-print("sum is {}".format(sum))
+print(f"Sum of {a} & {b} is {a+b}")
+print(f"Avg of {a} & {b} is {(a+b)/2}")
