@@ -5,6 +5,3 @@
 # print("My age is:", age+5)
 
 
-#Extra
-x = False
-print(~x)
