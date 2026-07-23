@@ -20,5 +20,42 @@
 
 
 #-------------------x-------------------------
+#append
+# nums = [1,2,3]
+# nums.append(4)
+# print(nums)
+
+#insert
+# nums = [1,2,3]
+# nums.insert(2,5)
+# print(nums)
+
+#SORT
+# nums = [1,10,5,6]
+# nums.sort()
+# nums.sort(reverse= True)
+# print(nums)
+
+#Reverse
+# nums = [1,2,10,3,4]
+# nums.reverse()
+# print(nums)
+
+#--------------------x-------------------------------------
+
+#Loops
+# nums = [1,2,3,10,4]
+# for val in nums:
+#     print(val)
 
 
+#Linear Search
+nums = [1,2,3,10,4]
+
+x = 10
+idx = 0
+for val in nums:
+    if val == x:
+        print(f"{x} found at idx = {idx}")
+        break
+    idx+=1
