@@ -1,1 +1,5 @@
-tup = (1,2,3,4,5)
+s = set()
+# for i in info:
+#     s.add(i[1])
+
+# print(s)
