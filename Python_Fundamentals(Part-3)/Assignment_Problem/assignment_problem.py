@@ -63,32 +63,32 @@
 
 #*5
 
-dict = {}
-ch = input("Enter A, B, C, D:\nA-Add a Student\nB-Update Marks\nC-Search for a Student\nD-Display all Students and Marks\n").upper()
+# dict = {}
+# ch = input("Enter A, B, C, D:\nA-Add a Student\nB-Update Marks\nC-Search for a Student\nD-Display all Students and Marks\n").upper()
 
-match ch:
-    case 'A':
-        name = input("Enter name: ")
-        marks = int(input("Enter marks: "))
-        dict.update({name:marks})
-    case 'B':
-        name = input("Enter name- marks to be edited")
-        marks = int(input("Enter marks: "))
-        # if name in dict.keys():
-        if name in dict:
-            dict[name] = marks
-        else:
-            print("Invalid data")
-    case 'C':
-        name = input("Enter name: ")
-        if name in dict:
-            print(f"{name} present")
-        else:
-            print(f"{name} not present")
-    case 'D':
-        print(dict.items())
-    case _ :
-        print("Invalid")
+# match ch:
+#     case 'A':
+#         name = input("Enter name: ")
+#         marks = int(input("Enter marks: "))
+#         dict.update({name:marks})
+#     case 'B':
+#         name = input("Enter name- marks to be edited")
+#         marks = int(input("Enter marks: "))
+#         # if name in dict.keys():
+#         if name in dict:
+#             dict[name] = marks
+#         else:
+#             print("Invalid data")
+#     case 'C':
+#         name = input("Enter name: ")
+#         if name in dict:
+#             print(f"{name} present")
+#         else:
+#             print(f"{name} not present")
+#     case 'D':
+#         print(dict.items())
+#     case _ :
+#         print("Invalid")
 
         
         
