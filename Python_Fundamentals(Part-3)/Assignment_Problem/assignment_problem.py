@@ -90,6 +90,81 @@
 #     case _ :
 #         print("Invalid")
 
+
+#*6
+
+# dict = {}
+# word = ["apple", "banana", "kiwi", "cherry", "mango"]
+# for i in word:
+#     # dict.update({i:len(word)})
+#     dict[i] = len(word)
+
+# print(dict)
+
+#*7
+
+# str = input("Enter the String: ")
+# num = 0
+# for i in str:
+#     if i == " ":
+#         num+=1
+# print(num)
+
+#*8
+
+# list1 = []
+# list2 = []
+# a = int(input("Enter the range of list1: "))
+# b = int(input("Enter the range of list2: "))
+# for i in range(a):
+#     list1.append(input("Enter the no(list1): "))
+# for i in range(b):
+#     list2.append(input("Enter the no(list2): "))
+
+# x = set(list1)
+# y = set(list2)
+# list3 = list(x.intersection(y))
+# if len(list3) == 0:
+#     print("No share Element")
+# else:
+#     print("Share element exist")
+
+#*9
+
+# list1 = [1,2,2,2,3,5,5,6]
+# seen = set()
+# duplicate = set()
+
+# for i in list1:
+#     if i in seen:
+#         duplicate.add(i)
+#     else:
+#         seen.add(i)
+
+# print(duplicate)
+
+#*10
+
+str = input("Enter the String: ")
+a = set(str)
+b = list(a)
+print(a,len(b))
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         
         
 
