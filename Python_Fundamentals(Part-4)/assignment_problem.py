@@ -1,30 +1,207 @@
 
 #*1
-class BankAccount:
-    def __init__(self,account_number,owner_name,balance):
-        self.account_number = account_number
-        self.owner_name = owner_name
-        self.balance = balance
+# class BankAccount:
+#     def __init__(self,account_number,owner_name,balance):
+#         self.account_number = account_number
+#         self.owner_name = owner_name
+#         self.balance = balance
 
-    def deposit(self,d):
-        if d>0:
-            self.balance +=d
-        else:
-            print("Invalid deposit amount")
+#     def deposit(self,d):
+#         if d>0:
+#             self.balance +=d
+#         else:
+#             print("Invalid deposit amount")
 
-    def withdraw(self,w):
-        if w <= 0:
-            print("Invalid withdraw amount")
-        elif self.balance >= w:
-            self.balance -= w
-            return self.balance
-        else:
-            print("Low balance")
+#     def withdraw(self,w):
+#         if w <= 0:
+#             print("Invalid withdraw amount")
+#         elif self.balance >= w:
+#             self.balance -= w
+#             return self.balance
+#         else:
+#             print("Low balance")
 
-    def check_balance(self):
-        return self.balance
+#     def check_balance(self):
+#         return self.balance
 
-b1 = BankAccount("123","jibitesh",500)
-b1.deposit(500)
-print(b1.withdraw(200))
-print(b1.check_balance())
+# b1 = BankAccount("123","jibitesh",500)
+# b1.deposit(500)
+# print(b1.withdraw(200))
+# print(b1.check_balance())
+
+
+
+#*2
+# class Book:
+#     def __init__(self,title,author,list_of_reviews = None):
+#         self.title = title
+#         self.author = author
+#         self.list_of_reviews = list_of_reviews
+
+#     def add_review(self,review):
+#         self.list_of_reviews.append(review)
+
+#     def count_reviews(self):
+#             return len(self.list_of_reviews)
+
+#     def display_all_reviews(self):
+#         return self.list_of_reviews
+
+
+# b1 = Book("Set T=0","Jibitesh Kumar Mishra",["Great","Outstanding","Fantabulous"])
+# b1.add_review("Worth it")
+# print(b1.count_reviews())
+# print(b1.display_all_reviews())
+
+#*3
+# class Student:
+#     def __init__(self,name,roll_no,marks):
+#         self.__name = name
+#         self.__roll_no = roll_no
+#         self.__marks = marks
+
+#     def getter(self):
+#         return self.__name,self.__roll_no,self.__marks
+
+#     def setter(self,name,roll_no,marks):
+#         if marks < 0:
+#             print("marks can't be -ve")
+#             return
+#         elif name == "":
+#             print("name can't be empty")
+#             return
+            
+#         elif not(roll_no >=1 and roll_no<=100):
+#             print("roll number has to be between 1 & 100")
+#             return
+
+#         self.__marks = marks
+#         self.__name = name
+#         self.__roll_no = roll_no
+
+# s1 = Student("Jibitesh",33,95)
+# s1.setter("ankita",21,-2)
+# print(s1.getter())
+
+
+#*4
+# class Shape:
+#     def area(self):
+#         pass
+
+# class Circle(Shape):
+
+#     def __init__(self,radius):
+#         self.radius = radius
+
+#     def area(self):
+#         return 3.14 * self.radius * self.radius
+
+
+# class Rectangle(Shape):
+
+#     def __init__(self, length,breadth):
+#         self.length = length
+#         self.breadth = breadth
+#     def area(self):
+#         return self.length * self.breadth
+
+# class Triangle(Shape):
+#     def __init__(self,base,height):
+#         self.base = base
+#         self.height = height
+
+#     def area(self):
+#         return 1/2 *self.base * self.height
+
+# t1 = Triangle(2,5)
+# print(t1.area())
+
+
+#*5
+# class Vehicle:
+#     def __init__(self,brand,model):
+#         self.brand = brand
+#         self.model = model
+
+
+# class Car(Vehicle):
+#     def __init__(self,brand,model,seats):
+#         super().__init__(brand,model)
+#         self.seats = seats
+
+#     def __str__(self):
+#         return f"Car Brand: {self.brand}, Car Model: {self.model}, no of seats: {self.seats}"
+
+
+# class Bike(Vehicle):
+#     def __init__(self,brand,model,engine_cc):
+#         super().__init__(brand,model)
+#         self.engine = engine_cc
+
+#     def __str__(self):
+#         return f"Bike Brand: {self.brand}, Bike Model: {self.model}, Engine: {self.engine}"
+
+# c1 = Car("Toyata","X12F3","5")
+# print(c1)
+
+
+#*6
+from abc import ABC, abstractmethod
+class Employee(ABC):
+    def __init__(self,name,id):
+        self.name = name
+        self.id = id
+
+    @abstractmethod
+    def calculate_salary(self):
+        pass
+
+class Intern(Employee):
+    def __init__(self,name,id,stipend):
+        super().__init__(name,id)
+        self.stipend = stipend
+
+
+    def calculate_salary(self):
+        return self.stipend
+
+class FullTimeEmployee(Employee):
+    def __init__(self,name,id,monthly_salary):
+        super().__init__(name,id)
+        self.monthly_salary = monthly_salary
+
+    def calculate_salary(self):
+        return self.monthly_salary * 12
+
+class ContractEmployee(Employee):
+
+    def __init__(self,name,id,hourly_rate, hours_worked):
+        super().__init__(name,id)
+        self.hourly_rate = hourly_rate
+        self.hours_worked = hours_worked
+
+    def calculate_salary(self):
+        return self.hourly_rate * self.hours_worked
+
+
+f1 = FullTimeEmployee("Jibitesh","1234",25000000)
+print(f1.calculate_salary())
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+    
