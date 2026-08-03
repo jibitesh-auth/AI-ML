@@ -147,46 +147,169 @@
 
 
 #*6
+# from abc import ABC, abstractmethod
+# class Employee(ABC):
+#     def __init__(self,name,id):
+#         self.name = name
+#         self.id = id
+
+#     @abstractmethod
+#     def calculate_salary(self):
+#         pass
+
+# class Intern(Employee):
+#     def __init__(self,name,id,stipend):
+#         super().__init__(name,id)
+#         self.stipend = stipend
+
+
+#     def calculate_salary(self):
+#         return self.stipend
+
+# class FullTimeEmployee(Employee):
+#     def __init__(self,name,id,monthly_salary):
+#         super().__init__(name,id)
+#         self.monthly_salary = monthly_salary
+
+#     def calculate_salary(self):
+#         return self.monthly_salary * 12
+
+# class ContractEmployee(Employee):
+
+#     def __init__(self,name,id,hourly_rate, hours_worked):
+#         super().__init__(name,id)
+#         self.hourly_rate = hourly_rate
+#         self.hours_worked = hours_worked
+
+#     def calculate_salary(self):
+#         return self.hourly_rate * self.hours_worked
+
+
+# f1 = FullTimeEmployee("Jibitesh","1234",25000000)
+# print(f1.calculate_salary())
+
+
+#*7
+# class Person:
+#     # def __init__(self,name):
+#     #     self.name = name
+#     # def __init__(self,name,age):
+#     #     self.name = name
+#     #     self.age = age
+
+
+#     def __init__(self,name,age=29,address="14B/2"):
+#         self.name = name
+#         self.age = age
+#         self.address = address
+
+      #*Dunder Method
+#     def __repr__(self):
+#         return f"{self.name}, {self.age}, {self.address}"
+
+# p1 = Person("Jibitesh",33)
+# print(p1)
+
+#*8
+
+# class Player:
+#     player_count = 0
+#     def __init__(self,name,level):
+#         self.name = name
+#         self.level = level
+#         Player.player_count+=1
+
+
+# p1 = Player("Jibitesh",20)
+# p2 = Player("ankita",33)
+# print(Player.player_count)
+
+#*9(MRO-> Method Resolution Order)
+
+# class Herbivore:
+#     def __init__(self,plant):
+#         self.plant = plant
+#     def herbi(self):
+#         print(self.plant)
+
+# class Carnivore:
+#     def __init__(self,animal):
+#         self.animal = animal
+#     def carni(self):
+#         print(self.animal)
+
+# class Omnivores:
+#     def __init__(self,plant,animal):
+#         self.plant = plant
+#         self.animal = animal
+
+#     def omni(self):
+#         print(self.plant,self.animal)
+
+# class Bear(Herbivore,Carnivore,Omnivores):
+#     def __init__(self,plant,animal):
+#         Herbivore.__init__(self,plant)
+#         Carnivore.__init__(self,animal)
+#         Omnivores.__init__(self,plant,animal)
+#         print(Bear.__mro__)
+
+
+
+# b1 = Bear("moneyplant","lion")
+# b1.omni()
+
+
+#*10
+
 from abc import ABC, abstractmethod
-class Employee(ABC):
-    def __init__(self,name,id):
-        self.name = name
-        self.id = id
+class Message:
+    def __init__(self,message):
+        self.message = message
 
     @abstractmethod
-    def calculate_salary(self):
+    def sending_message(self):
         pass
 
-class Intern(Employee):
-    def __init__(self,name,id,stipend):
-        super().__init__(name,id)
-        self.stipend = stipend
+class ChatRoom:
+    @abstractmethod
+    def user_join_leave(self):
+        pass
+    def chat_history(self):
+        pass
+    
 
 
-    def calculate_salary(self):
-        return self.stipend
+class User(Message,ChatRoom):
+    list=[]
+    def __init__(self,name,message):
+        Message.__init__(self,message)
+        self.name = name
 
-class FullTimeEmployee(Employee):
-    def __init__(self,name,id,monthly_salary):
-        super().__init__(name,id)
-        self.monthly_salary = monthly_salary
+    def sending_message(self):
+        self.message = self.message
 
-    def calculate_salary(self):
-        return self.monthly_salary * 12
+    def chat_history(self):
+        User.list.append(self.message)
+        return list
+    
+    def user_join_leave()
 
-class ContractEmployee(Employee):
+    
 
-    def __init__(self,name,id,hourly_rate, hours_worked):
-        super().__init__(name,id)
-        self.hourly_rate = hourly_rate
-        self.hours_worked = hours_worked
+    
 
-    def calculate_salary(self):
-        return self.hourly_rate * self.hours_worked
+    
 
 
-f1 = FullTimeEmployee("Jibitesh","1234",25000000)
-print(f1.calculate_salary())
+
+
+
+
+
+    
+
+
+    
 
 
 
