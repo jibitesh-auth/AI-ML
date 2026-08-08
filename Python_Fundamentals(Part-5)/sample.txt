@@ -1,3 +1,4 @@
-old text which already 
-exist in file.
-New text being appendedSome random text
+This is a demo file
+to store some words
+for the Python activity
+that is to be solved by us.

@@ -1,3 +1,5 @@
+
+#*Uses Pointer concept
 # f = open("sample.txt","r") #*file object
 #*Read Operation
 # data = f.read()
@@ -30,18 +32,43 @@
 
 #----------------x----------------------------------
 
+#*New file Created
 # f = open("sample1.txt","a")
 # f.write("Some random text")
 
 #-------------------x----------------------------
-
-f = open("sample2.txt","w")
-f.write("some random text 1")
+#*New file Created
+# f = open("sample2.txt","w")
+# f.write("some random text 1")
 
 #----------------x-----------------------------
+#*x mode(Throws error)
+# f = open("sample1.txt","x")
+# f.write("hello")
 
-f = open("sample1.txt","x")
-f.write("hello")
+#---------------x--------------------------
+#* + Mode
+
+#*r+
+# f = open("sample1.txt","r+")
+# print(f.read())
+# f.write("123")
+
+# f = open("sample.txt","r+")
+# f.write("123")
+# print(f.read())
+#*its read part prints after the write part
+
+#*w+
+# f = open("sample2.txt","w+")
+# f.write("123")
+# print(f.read())
+
+#*a+
+# f = open("sample.txt","a+")
+# f.write("123")
+# print(f.read())
+#*its read part prints nothing as pointer is at end
 
 
 
