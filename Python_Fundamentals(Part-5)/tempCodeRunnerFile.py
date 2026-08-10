@@ -1,11 +1,4 @@
-    # line = 0
-    # for i in data:
-    #     if i == "\n":
-    #         line+=1
-    #     elif i == "Python":
-    #         print("Exist")
-    #         print(line)
-    #         break
-    #     else:
-    #         print("Don't Exit")
-    #         break
+square = []
+# for i in range(6):
+#     square.append(i*i)
+# print(square)

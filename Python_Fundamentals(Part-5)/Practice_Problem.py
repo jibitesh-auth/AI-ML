@@ -1,24 +1,11 @@
-with open("sample.txt","r") as f:
-    data = list(f.readlines())
-    a = False
-    line = 0
-    for i in data:
-        if "\n" in i:
-            line+=1
-        if "Python" in i:
-           print("Exist")
-           print(f"Line: {line}")
-           a = True
-           break
 
-    if a == False:
-        print("Doesn't Exist")
-    
+'''This is a demo file
+to store some words
+for the Python activity
+that is to be solved by us.
 
-
-
-#*OR
-
+#*Find the word "Python" in Sample.txt, also print the line no
+'''
 
 data = True
 line = 1
