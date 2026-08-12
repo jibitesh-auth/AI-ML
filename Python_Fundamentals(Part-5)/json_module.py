@@ -36,6 +36,7 @@ import json
 #     print(type(py_obj),py_obj)
 
 #*json.dump()
+#*Parameter-> First py_object then file
 
 data = {
     "name" : "jibitesh",
