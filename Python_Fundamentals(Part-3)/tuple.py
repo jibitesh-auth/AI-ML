@@ -4,7 +4,7 @@
 
 # print(tup[2])
 
-# tup[2] = 11 #Immutable
+# tup[2] = 11 #*Immutable
 
 #---------------x------------------------
 """
@@ -30,7 +30,7 @@ print(type(tup))  #<class 'tuple'>
 # print(sum)
 
 #----------------x------------------------
-#Method
+#*Method
 
 tup = (1,2,2,3,2,4)
 print(tup.index(2))

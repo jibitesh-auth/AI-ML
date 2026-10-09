@@ -1,3 +1,6 @@
+
+#*Heirarchial Inheritance
+
 # class Employee:
 #     start_time ="10am"
 #     end_time = "6pm"
@@ -52,7 +55,6 @@
 class Teacher:
     def __init__(self,salary):
         self.salary = salary
-
 
 class Student:
     def __init__(self,gpa):

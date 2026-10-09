@@ -8,6 +8,7 @@
 # else:
 #     print("Not Pallindrome")
 
+#*OR
 
 # str = input("Enter the String: ")
 # str1=""
@@ -72,7 +73,7 @@
 #         marks = int(input("Enter marks: "))
 #         dict.update({name:marks})
 #     case 'B':
-#         name = input("Enter name- marks to be edited")
+#         name = input("Enter name whose marks to be edited: ")
 #         marks = int(input("Enter marks: "))
 #         # if name in dict.keys():
 #         if name in dict:
@@ -96,8 +97,8 @@
 # dict = {}
 # word = ["apple", "banana", "kiwi", "cherry", "mango"]
 # for i in word:
-#     # dict.update({i:len(word)})
-#     dict[i] = len(word)
+#     # dict.update({i:len(i)})
+#     dict[i] = len(i)
 
 # print(dict)
 

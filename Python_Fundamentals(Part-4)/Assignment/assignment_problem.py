@@ -191,12 +191,6 @@
 
 #*7
 # class Person:
-#     # def __init__(self,name):
-#     #     self.name = name
-#     # def __init__(self,name,age):
-#     #     self.name = name
-#     #     self.age = age
-
 
 #     def __init__(self,name,age=29,address="14B/2"):
 #         self.name = name
@@ -258,6 +252,9 @@
 # b1 = Bear("moneyplant","lion")
 # b1.omni()
 
+#*O/P: 
+# (<class '__main__.Bear'>, <class '__main__.Herbivore'>, <class '__main__.Carnivore'>, <class '__main__.Omnivores'>, <class 'object'>)
+#moneyplant lion
 
 #*10
 

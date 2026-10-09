@@ -18,5 +18,3 @@ lion.make_sound()
 
 cow = Cow()
 cow.make_sound()
-
-

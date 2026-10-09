@@ -3,8 +3,6 @@ class Student:
     college = "ABC"
     year = "4th year"
 
-  
-
 stu1 = Student()
 # print(stu1)
 

@@ -39,11 +39,11 @@ info = {
 # for key,values in info.items():
 #     print(key,values)
 
-#*d.get(val)
+#*d.get(key)
 # print(info.get("cgpa2"))
 # print("End of code")
 
-# print(info["cgpa2"])
+# print(info["cgpa2"])  #*Error
 # print("End of code")
 
 #*d.update(new_item)

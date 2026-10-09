@@ -12,7 +12,7 @@
 # marks = [99,89,100,65,92, "abc", 100.99]
 # print(type(marks))
 
-#Slicing
+#*Slicing
 # marks = [99,89,100,65,92, "abc", 100.99]
 # print(marks[:5])
 # print(marks[5:])
@@ -20,36 +20,36 @@
 
 
 #-------------------x-------------------------
-#append
+#*append
 # nums = [1,2,3]
 # nums.append(4)
 # print(nums)
 
-#insert
+#*insert
 # nums = [1,2,3]
 # nums.insert(2,5)
 # print(nums)
 
-#SORT
+#*SORT
 # nums = [1,10,5,6]
 # nums.sort()
 # nums.sort(reverse= True)
 # print(nums)
 
-#Reverse
+#*Reverse
 # nums = [1,2,10,3,4]
 # nums.reverse()
 # print(nums)
 
 #--------------------x-------------------------------------
 
-#Loops
+#*Loops
 # nums = [1,2,3,10,4]
 # for val in nums:
 #     print(val)
 
 
-#Linear Search
+#*Linear Search
 nums = [1,2,3,10,4]
 
 x = 10

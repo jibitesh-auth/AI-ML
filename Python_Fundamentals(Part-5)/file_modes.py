@@ -57,7 +57,6 @@
 # f = open("sample.txt","r+")
 # f.write("123")
 # print(f.read())
-#*its read part prints after the write part
 
 #*w+
 # f = open("sample2.txt","w+")
