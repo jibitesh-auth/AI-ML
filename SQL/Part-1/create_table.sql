@@ -70,6 +70,32 @@ SELECT name,age
 FROM user
 WHERE age+1=19;
 
+SELECT name,age,followers
+FROM user
+WHERE age > 15 AND followers > 200;
+
+SELECT name,followers
+FROM user
+WHERE age > 15 OR followers > 200;
+
+SELECT name,age
+FROM user
+WHERE age BETWEEN 15 AND 18;
+
+SELECT name, age,followers,email
+FROM user
+WHERE email IN ("adam@yahoo.in","gorilla@gmail.com","bear@yahoo.in");
+
+INSERT INTO user
+(id, age, name, email, followers, following)
+VALUES
+(5, 14, "eve","eve@yahoo.in",123,145),
+(6, 16, "farah", "farah@gmail.com",1000, 1000);
+
+SELECT name, followers, email
+FROM user
+WHERE age IN (14, 16);
+
 -- POST TABLE
 CREATE TABLE post (
 	id INT PRIMARY KEY,
