@@ -96,6 +96,105 @@ SELECT name, followers, email
 FROM user
 WHERE age IN (14, 16);
 
+SELECT name, followers, email
+FROM user
+WHERE age NOT IN (14,16);
+
+-- Limit Clause
+SELECT name,age,email
+FROM user
+WHERE age > 15
+LIMIT 2;
+
+SELECT name, age, email
+FROM user
+LIMIT 3;
+
+-- ORDER BY
+SELECT name,age,followers
+FROM user
+ORDER BY followers ASC;
+
+SELECT name,age,followers
+FROM user
+ORDER BY followers DESC;
+
+SELECT name,age,followers
+FROM user
+ORDER BY followers;
+
+-- Aggregate Funtions
+SELECT max(followers)
+FROM user;
+
+SELECT max(age)
+FROM user;
+
+SELECT count(age)
+FROM user
+WHERE age = 14;
+
+SELECT min(age)
+FROM user;
+
+SELECT avg(age)
+FROM user;
+
+SELECT sum(followers)
+FROM user;
+
+-- Group By
+SELECT age,COUNT(id)
+FROM user
+GROUP BY age;
+
+SELECT age,max(followers)
+FROM user
+GROUP BY age;
+
+/*
+SELECT name,age,max(followers)
+FROM user
+GROUP BY age;  -- Error
+*/
+-- We can't put extra coloumn except the column used for [GROUP BY]
+-- We can put extra column inside aggregate function
+
+SELECT age, max(followers),min(name)
+FROM user
+GROUP BY age;
+
+-- Having Clause
+SELECT age,max(followers)
+FROM user
+GROUP BY age
+HAVING max(followers) > 200
+ORDER BY age ASC;
+
+-- UPDATE
+UPDATE user
+SET followers = 10000009
+WHERE age = 16;
+
+SET SQL_SAFE_UPDATES = 0;
+
+SELECT *
+FROM user;
+
+-- DELETE
+DELETE FROM user
+WHERE age = 14;
+
+SELECT * FROM user;
+
+
+
+
+
+
+
+
+
 -- POST TABLE
 CREATE TABLE post (
 	id INT PRIMARY KEY,
