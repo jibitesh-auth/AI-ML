@@ -184,10 +184,48 @@ FROM user;
 -- DELETE
 DELETE FROM user
 WHERE age = 14;
-
 SELECT * FROM user;
 
+DELETE FROM user
+WHERE id = 6;
 
+-- ALTER
+
+ALTER TABLE user
+ADD COLUMN city VARCHAR(25) DEFAULT "Delhi";
+SELECT * FROM user;
+
+ALTER TABLE user
+DROP COLUMN age;
+SELECT * FROM user;
+
+ALTER TABLE user
+RENAME TO instaUser;
+SELECT * FROM instaUser;
+
+ALTER TABLE instaUser
+RENAME TO user;
+
+ALTER TABLE user
+CHANGE COLUMN followers subs INT DEFAULT 0;
+SELECT * FROM user;
+
+ALTER TABLE user
+MODIFY subs INT DEFAULT 5;
+INSERT INTO user
+(id,name,email,following)
+VALUES
+(12,"Jibitesh","jibiteshofficial@gmail.com",500);
+SELECT * FROM user;
+
+-- TRUNCATE
+TRUNCATE TABLE user;
+SELECT * FROM user;
+
+DROP TABLE user;
+/*
+SELECT * FROM user;   -- Error
+*/
 
 
 
