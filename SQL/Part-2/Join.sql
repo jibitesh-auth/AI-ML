@@ -39,4 +39,40 @@ INNER JOIN orders o
 ON c.customer_id = o.customer_id;
 
 -- Left Join
+SELECT *
+FROM customers c
+LEFT JOIN orders o
+ON c.customer_id = o.customer_id;
+
+-- Right Join
+SELECT *
+FROM customers c
+RIGHT JOIN orders o
+ON c.customer_id = o.customer_id;
+
+-- Outer Join
+SELECT *
+FROM customers c
+LEFT JOIN orders o
+ON c.customer_id = o.customer_id
+UNION
+SELECT *
+FROM customers as c
+RIGHT JOIN orders as o
+ON c.customer_id = o.customer_id;
+
+-- Cross Join
+SELECT *
+FROM customers c
+CROSS JOIN orders o;
+
+-- Self Join[Works on One Table]
+SELECT *
+FROM customers c
+JOIN customers d
+ON c.customer_id = d.customer_id;
+
+
+
+
 
