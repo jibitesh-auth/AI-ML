@@ -72,7 +72,17 @@ FROM customers c
 JOIN customers d
 ON c.customer_id = d.customer_id;
 
+-- Left Exclusive
+SELECT *
+FROM customers c
+LEFT JOIN orders o
+ON c.customer_id = o.customer_id
+WHERE o.customer_id IS NULL;
 
-
-
+-- Right Exclusive
+SELECT *
+FROM customers c
+RIGHT JOIN orders o
+ON c.customer_id = o.customer_id
+WHERE c.customer_id IS NULL;
 
